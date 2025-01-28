@@ -1,70 +1,123 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# صحتي - منصة الإلكترونية لقطع الإجازات المرضية
 
-## Available Scripts
+## مقدمة
+**صحتي** هو موقع مبتكر يهدف إلى تسهيل عملية تقديم وقطع الإجازات المرضية بشكل إلكتروني، مما يقلل الجهد ويوفر الوقت للموظفين وأصحاب العمل. يعتمد الموقع على واجهة أمامية تفاعلية باستخدام React، وخلفية قوية باستخدام PHP لمعالجة البيانات وربطها بقاعدة بيانات MySQL.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## مميزات المشروع
+- **واجهة تفاعلية:** واجهة مستخدم مرنة وسهلة الاستخدام مصممة بـ React.
+- **نظام إدارة الإجازات:** يسمح للموظفين بتقديم طلبات الإجازات المرضية وتتبع حالتها.
+- **تقارير طبية:** إمكانية عرض وتحميل الإجازات الطبية بصيغة PDF.
+- **تكامل API:** لربط النظام مع منصات طبية أخرى (اختياري).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## المتطلبات الأساسية
+لتشغيل المشروع، تحتاج إلى:
+- **Node.js** (الإصدار 16 أو أحدث) لتشغيل واجهة React.
+- **PHP** (الإصدار 7.4 أو أحدث) لتشغيل الخادم الخلفي.
+- **Composer** لإدارة مكتبات PHP.
+- **MySQL** كقاعدة بيانات.
+- **XAMPP** (اختياري) لتشغيل الخادم محليًا.
+- **npm** لتثبيت حزم واجهة React.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## إعداد المشروع
 
-### `npm run build`
+### 1. استنساخ المشروع
+قم باستنساخ المستودع إلى جهازك:
+```bash
+git clone https://github.com/BSPSoft/sehaty/
+cd sehaty
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. إعداد واجهة المستخدم (React)
+1. انتقل إلى مجلد الواجهة الأمامية:
+   ```bash
+   cd seha
+   ```
+2. قم بتثبيت الحزم المطلوبة:
+   ```bash
+   npm install
+   ```
+3. تشغيل واجهة المستخدم محليًا:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 3. إعداد الخادم الخلفي (PHP)
+1. انتقل إلى مجلد الخلفية:
+   ```bash
+   cd backend
+   ```
+2. تثبيت الحزم باستخدام Composer:
+   ```bash
+   composer install
+   ```
+3. إعداد قاعدة البيانات:
+   - أنشئ قاعدة بيانات جديدة باسم `sahti_db`.
+   - استورد ملف قاعدة البيانات:
+   - `server/db/sehatydb.sql`
+    
+4. تشغيل الخادم باستخدام XAMPP أو أي خادم محلي آخر.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## الاستخدام
 
-## Learn More
+1. **الدخول إلى الموقع:**
+   - للوصول إلى الواجهة الأمامية، افتح الرابط:  
+     `http://localhost:3000`
+   -   للوصول إلى الخلفية قواعد بيانات php (API)، افتح الرابط:  
+     `http://localhost/phpmyadmin/`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **المستخدمون الافتراضيون:**
+   - **الإدارة:**
+     - البريد الالكتروني : `admin@gmail.com`
+     - كلمة المرور: `1qa2ws3d`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## هيكل المشروع
+- **src/**: يحتوي على واجهة المستخدم المصممة بـ React.
+- **server/**: يحتوي على ملفات PHP للتعامل مع الطلبات وقاعدة البيانات.
+- **server/db/sehatydb.sql**: ملف  قاعدة البيانات.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## التقنيات المستخدمة
+- **React**: لإنشاء واجهة المستخدم.
+- **PHP**: لمعالجة الطلبات.
+- **MySQL**: لتخزين بيانات الإجازات والمستخدمين.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## المساهمة
+إذا كنت ترغب في تحسين المشروع أو إضافة ميزات جديدة، يمكنك فتح طلب سحب (Pull Request) أو إنشاء مشكلة (Issue) في مستودع المشروع.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## حقوق الملكية
+تم تطوير هذا المشروع بواسطة [BSpSoft] [basheer-al-shamiry]. جميع الحقوق محفوظة © 2025.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## معاينة
 
-### `npm run build` fails to minify
+![لقطة شاشة للمشروع](public/images/img1.jpg)
+![لقطة شاشة للمشروع](public/images/img2.jpg)
+![لقطة شاشة للمشروع](public/images/img3.jpg)
+![لقطة شاشة للمشروع](public/images/img4.jpg)
+![لقطة شاشة للمشروع](public/images/img5.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
