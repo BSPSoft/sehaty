@@ -1,0 +1,21 @@
+مكتبة النوافذ المنبثقة
+sweetAlert2
+--
+ npm install sweetalert2
+--
+
+مكتبة التعامل مع ملفات pdf
+mpdf/mpdf
+
+--
+composer require mpdf/mpdf
+--
+
+فائة ملف .htaccess
+هو ملف يستخم في سرفر php
+يستخدم كملف اعدادات لتعديل اعدادات الخادم apache
+في الملفات التي يتواجد فيها
+
+
+
+

@@ -1,0 +1,99 @@
+.container-Vecation {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.header-Vecation {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container-Vecation .form-Vecation {
+    padding: 20px;
+    background-color:  rgb(47, 49, 49);
+}
+
+.container-Vecation .form-Vecation .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.container-Vecation .form-Vecation label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-self: flex-start;
+    color: #fff;
+}
+
+.form-Vecation input,.form-Vecation select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #bfcedd;
+}
+.container-Vecation .form-Vecation input::placeholder{
+    color:#122;
+}
+.container-Vecation .form-Vecation input:focus, .form-Vecation select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.container-Vecation .form-Vecation button {
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+}
+.form-Vecation  button[type="submit"]{
+    background-color: #007bff;
+  }
+  .form-Vecation  button[type="submit"]:hover{
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  .form-Vecation  button[type="reset"]{
+    background-color: red;
+  }
+  .form-Vecation  button[type="reset"]:hover{
+    background-color: #b30600;
+    transform: scale(1.02);
+  }
+.container-Vecation .form-Vecation .btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container-Vecation .form-Vecation .form-group {
+        flex-direction: column;
+    }
+
+     .form-Vecation input, .form-Vecation select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .container-Vecation .form-Vecation .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

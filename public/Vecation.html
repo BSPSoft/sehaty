@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container-Vecation">
+        <div class="header-Vecation">
+            نموذج إدخال بيانات الإجازة المرضية
+        </div>
+        <div class="form-Vecation">
+            <form>
+                <!-- {/* بيانات المريض */} -->
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" placeholder="أدخل الاسم الكامل" required  />
+                </div>
+                <div class="form-group">
+                    <label for="id">رقم الهوية/الإقامة</label>
+                    <input type="number" id="id" placeholder="أدخل رقم الهوية/الإقامة" required />
+                </div>
+                <div class="form-group">
+                    <label for="nationality">الجنسية</label>
+                    <input type="text" id="nationality" placeholder="أدخل الجنسية" required />
+                </div>
+
+                <!-- {/* بيانات الإجازة */} -->
+                <div class="form-group">
+                    <label for="start-date">تاريخ بداية الإجازة</label>
+                    <input type="date" id="start-date" required />
+                </div>
+                <div class="form-group">
+                    <label for="end-date">تاريخ نهاية الإجازة</label>
+                    <input type="date" id="end-date" required />
+                </div>
+                <div class="form-group">
+                    <label for="duration">مدة الإجازة (بالأيام)</label>
+                    <input type="number" id="duration" placeholder="أدخل مدة الإجازة" min="1" required />
+                </div>
+
+                <!-- {/* بيانات العمل والطبيب */} -->
+                <div class="form-group">
+                    <label for="work">جهة العمل</label>
+                    <input type="text" id="work" placeholder="أدخل جهة العمل" required />
+                </div>
+                <div class="form-group">
+                    <label for="doctor">اسم الطبيب المعالج</label>
+                    <input type="text" id="doctor" placeholder="أدخل اسم الطبيب المعالج" required />
+                </div>
+                <div class="form-group">
+                    <label for="specialization">التخصص الطبي</label>
+                    <select id="specialization" required >
+                        <option value="" disabled selected>اختر التخصص</option>
+                        <option value="طبيب عام">طبيب عام</option>
+                        <option value="طبيب باطنية">طبيب باطنية</option>
+                        <option value="طبيب عظام">طبيب عظام</option>
+                        <option value="طبيب أطفال">طبيب أطفال</option>
+                        <option value="طبيب أسنان">طبيب أسنان</option>
+                    </select>
+                </div>
+
+                <!-- {/* زر الإرسال */} -->
+
+                  <hr  />
+                  <button type="submit">حفظ</button>
+                  <button type="reset">جديد</button>
+                
+                <br /><br />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
